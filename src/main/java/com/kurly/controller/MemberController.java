@@ -17,5 +17,10 @@ public class MemberController {
 			session.invalidate();
 			return "redirect:/";
 		}
+	
+	@GetMapping("/member/join")
+	public String getMemberJoin() {
+		return "/member/join";
 	}
 
+}

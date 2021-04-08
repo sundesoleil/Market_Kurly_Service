@@ -10,8 +10,11 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>마켓컬리 :: 내일의 장보기, 마켓컬리</title>
 	<link rel="stylesheet" href="/resources/css/reset.css" />
+	<link rel="stylesheet" href="/resources/css/login.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+	<link rel="icon" href="/resources/images/favicon.png" />
 	<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="/resources/js/login.js"></script>
 </head>
@@ -23,11 +26,14 @@
 		<input type="password" id="user_pwd" placeholder="비밀번호를 입력해주세요"/>
 		<div class="options_area">
 			<input type="checkbox" id="secure_login" />
-			<label for="secure_login" id="secure_icon"></label>
+			<label for="secure_login" id="secure_icon">
+				<i class="fas fa-check"></i>
+			</label>
 			<label for="secure_login" id="secure_text">보안접속</label>
 		</div>
 		<button id="login">로그인</button>
 		<a href="/member/join" id="join">회원가입</a>
 	</div>
+	<%@include file="/WEB-INF/views/includes/footer.jsp" %>
 </body>
 </html>

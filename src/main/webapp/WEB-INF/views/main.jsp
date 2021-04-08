@@ -98,7 +98,7 @@
 				<div class="prod_item">
 					<div class="prod_item_img" 
 					style="background-image:url('/images/${product.mkpi_uri }')"
-					onclick="location.href='/shop/detail'"
+					onclick="location.href='/shop/detail?prod_seq=${product.mkp_seq}'"
 					></div>
 					<div class="prod_item_text">
 						<p class="prod_item_title">[${product.mkb_name}]${product.mkp_name }</p>
@@ -129,7 +129,7 @@
 				<div class="prod_item">
 					<div class="prod_item_img" 
 					style="background-image:url('/images/${product.mkpi_uri }')"
-					onclick="location.href='/shop/detail'"
+					onclick="location.href='/shop/detail?prod_seq=${product.mkp_seq}'"
 					></div>
 					<div class="prod_item_text">
 						<p class="prod_item_title">[${product.mkb_name}]${product.mkp_name }</p>
@@ -161,7 +161,7 @@
 				<div class="prod_item">
 					<div class="prod_item_img" 
 					style="background-image:url('/images/${product.mkpi_uri }')"
-					onclick="location.href='/shop/detail'"
+					onclick="location.href='/shop/detail?prod_seq=${product.mkp_seq}'"
 					></div>
 					<div class="prod_item_text">
 						<p class="prod_item_title">[${product.mkb_name}]${product.mkp_name }</p>
@@ -192,7 +192,7 @@
 				<div class="prod_item">
 					<div class="prod_item_img" 
 					style="background-image:url('/images/${product.mkpi_uri }')"
-					onclick="location.href='/shop/detail'"
+					onclick="location.href='/shop/detail?prod_seq=${product.mkp_seq}'"
 					></div>
 					<div class="prod_item_text">
 						<p class="prod_item_title">[${product.mkb_name}]${product.mkp_name }</p>
@@ -216,5 +216,6 @@
 			</div>
 		</section>
 	</div>
+	<%@include file="/WEB-INF/views/includes/footer.jsp" %>
 </body>
 </html>

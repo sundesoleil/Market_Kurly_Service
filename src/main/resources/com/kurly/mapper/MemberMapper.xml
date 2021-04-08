@@ -9,4 +9,46 @@
 		FROM mk_member
 		WHERE mkm_id=#{id} AND mkm_pwd=#{pwd} 
 	</select>
+	<insert id="insertMemberInfo">
+		INSERT INTO mk_member(
+			mkm_id, 
+			mkm_name, 
+			mkm_pwd, 
+			mkm_email, 
+			mkm_phone, 
+			mkm_address, 
+			mkm_gen,
+			mkm_birth, 
+			mkm_terms, 
+			mkm_collect_agree_mk, 
+			mkm_collect_agree_other, 
+			mkm_info_receive,
+			mkm_info_receive_type,
+			mkm_age_confirm
+		)
+		VALUES(
+			#{mkm_id},
+			#{mkm_name},
+			#{mkm_pwd},
+			#{mkm_email},
+			#{mkm_phone},
+			#{mkm_address},
+			#{mkm_gen},
+			#{mkm_birth},
+			#{mkm_terms},
+			#{mkm_collect_agree_mk},
+			#{mkm_collect_agree_other} ,
+			#{mkm_info_receive},
+			#{mkm_info_receive_type},
+			#{mkm_age_confirm}
+		)
+	</insert>
+	<select id="selectUserCntById" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM mk_member
+		WHERE mkm_id=#{id}
+	</select>
+	<select id="selectUserCntByEmail" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM mk_member 
+		WHERE mkm_email=#{email}
+	</select>
 </mapper>

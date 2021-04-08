@@ -82,12 +82,19 @@
 						</div>
 					</div>
 				</div>
-				<div class="detail_info">
-					<div class="row">
-						<div>알레르기정보</div>
-						<div>${product.mkp_allergy_info }</div>
+				
+					<div class="detail_info">
+						<div class="row">
+							<div>알레르기정보</div>
+							<c:if test="${product.mkp_allergy_info != null }">
+								<div>${product.mkp_allergy_info }</div>
+							</c:if>
+							<c:if test="${product.mkp_allergy_info == null }">
+								<div>없음</div>
+							</c:if>
+						</div>
 					</div>
-				</div>
+				
 				<div class="detail_info">
 					<div class="row">
 						<div>유통기한</div>
@@ -107,7 +114,7 @@
 								<i class="fas fa-minus"></i>
 							</button>
 							<span class="total">
-								35
+								1
 							</span>
 							<button id="increase">
 								<i class="fas fa-plus"></i>
@@ -121,10 +128,12 @@
 						<span>9999</span>
 						<span>원</span>
 					</div>
-					<div class="final_point">
-						<span>적립</span>
-						<span>구매 시 <b>999</b>원 적립</span>
-					</div>
+<%-- 					<c:if test="${product.mkp_point_rate != null }"> --%>	
+						<div class="final_point">
+								<span>적립</span>
+								<span>구매 시 <b>0</b>원 적립</span>
+						</div>
+<%-- 					</c:if> --%>
 				</div>
 				<div class="button_area">
 					<button id="add_alarm">재입고 알림</button>
@@ -134,5 +143,6 @@
 			</div>
 		</section>
 	</div>
+	<%@include file="/WEB-INF/views/includes/footer.jsp" %>
 </body>
 </html>

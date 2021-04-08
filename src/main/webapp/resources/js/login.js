@@ -19,4 +19,10 @@ $(function(){
 			}
 		})
 	})
+	
+	$("#user_pwd").keydown(function(e){
+		if(e.keydown == 13){
+			$("#login").trigger("click");
+		} 
+	})
 })

@@ -83,6 +83,10 @@
 	width: 150px;
 	color: #777;
 }
+.row > div:nth-child(2){
+	width: calc(100% - 150px);
+	line-height: 1.5;
+}
 .row p:last-child{
 	font-size: 12px;
 	margin-top: 5px;

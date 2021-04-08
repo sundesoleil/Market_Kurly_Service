@@ -154,12 +154,15 @@ public class ProductService {
 		}
 		
 		product.setOriginPrice(formatter.format(product.getMkp_price()));
+		Integer point = null;
 		
 		if(product.getMkp_point_rate() != null) {
-			Integer point = (int)(product.getMkp_price() * product.getMkp_point_rate() / 100.0);
-			product.setPoint(formatter.format(point));
-			product.setPointInt(point);
+			point = (int)(product.getMkp_price() * product.getMkp_point_rate() / 100.0);
+		}else {
+			point = 0;
 		}
+		product.setPoint(formatter.format(point));
+		product.setPointInt(point);
 		return product;
 	}
 }
